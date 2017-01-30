@@ -5,10 +5,11 @@ class Scip3 < Formula
   sha256 "419968d118d8a9fc8bce05d3fd2f5fdd40a23818a7b1e9c0d9e482ad7590e98c"
   version "3.2.1"
 
+  depends_on "homebrew/science/ipopt"
+  depends_on "homebrew/homebrew-dupes/zlib"
+
   depends_on "gmp"
-  depends_on "ipopt"
   depends_on "readline"
-  depends_on "zlib"
 
   def install
     system "make", "ZIMPL=true"
