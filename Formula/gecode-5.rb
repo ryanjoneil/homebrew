@@ -7,10 +7,9 @@ class Gecode5 < Formula
 
   depends_on "boost"
   depends_on "mpfr"
-  depends_on "qt-4"
 
   def install
-    system "./configure", "--with-mpfr-lib", "--disable-examples", "--enable-gist", "--enable-qt", "--prefix=#{prefix}"
+    system "./configure", "--with-mpfr-lib", "--disable-examples", "--disable-gist", "--disable-qt", "--prefix=#{prefix}"
     system "make"
     system "make", "install"
     lib.install
