@@ -9,7 +9,7 @@ class Gecode5 < Formula
   depends_on "mpfr"
 
   def install
-    system "./configure", "--with-mpfr-lib", "--disable-qt", "--disable-gist", "--disable-examples", "--prefix=#{prefix}"
+    system "./configure", "--with-mpfr-lib", "--disable-examples", "--prefix=#{prefix}"
     system "make"
     system "make", "install"
     lib.install
