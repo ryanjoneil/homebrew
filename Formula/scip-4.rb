@@ -13,7 +13,7 @@ class Scip4 < Formula
 
   def install
     system "make", "ZIMPL=true"
-    system "make", "scipoptlib"
+    system "make", "scipoptlib", "ZIMPL=false"
 
     # SCIP installation path is currently broken.
     system "perl", "-pi", "-e", "s|INSTALLDIR=../|INSTALLDIR=|", "Makefile"
