@@ -6,7 +6,7 @@ class Qt4 < Formula
   version "4.8.7"
 
   def install
-    system "./configure", "-opensource", "-confirmlicense", "--prefix=#{prefix}"
+    system "./configure", "-opensource", "-confirm-license", "--prefix=#{prefix}"
     system "make"
     system "make", "install"
     bin.install
