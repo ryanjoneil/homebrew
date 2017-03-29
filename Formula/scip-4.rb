@@ -12,8 +12,8 @@ class Scip4 < Formula
   depends_on "readline"
 
   def install
-    system "make"
-    system "make", "install", "INSTALLDIR=#{prefix}"
+    system "make", "ZIMPL=true", "SHARED=false"
+    system "make", "install", "ZIMPL=true", "SHARED=false", "INSTALLDIR=#{prefix}"
 
     bin.install
     lib.install
