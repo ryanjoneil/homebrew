@@ -12,12 +12,7 @@ class Scip4 < Formula
   depends_on "readline"
 
   def install
-    system "make", "ZIMPL=true"
-    system "make", "scipoptlib", "ZIMPL=false"
-
-    # SCIP installation path is currently broken.
-    system "perl", "-pi", "-e", "s|INSTALLDIR=../|INSTALLDIR=|", "Makefile"
-
+    system "make"
     system "make", "install", "INSTALLDIR=#{prefix}"
 
     bin.install
