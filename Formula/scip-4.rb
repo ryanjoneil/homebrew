@@ -2,7 +2,7 @@ class Scip4 < Formula
   desc "SCIP Optimization Suite"
   homepage "http://scip.zib.de/"
   url "http://scip.zib.de/download/release/scipoptsuite-4.0.0.tgz"
-  sha256 "4b5fc921880728ab99c089413cf662a0ce964cedf291ec4ee0f399405723c594"
+  sha256 "087535760eae3d633e2515d942a9b22e1f16332c022be8d093372bdc68e8a661"
   version "4.0.0"
 
   depends_on "homebrew/science/ipopt"
