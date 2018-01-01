@@ -6,7 +6,7 @@ class Scip5 < Formula
   version "5.0.0"
 
   depends_on "homebrew/science/ipopt"
-  depends_on "homebrew/homebrew-dupes/zlib"
+  depends_on "zlib"
 
   depends_on "gmp"
   depends_on "readline"
