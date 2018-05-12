@@ -10,8 +10,8 @@ brew update
 #### Optimiztation Tools
 
 ```
-brew install gecode-5
-brew install gecode-5-doc
+brew install gecode-6
+brew install gecode-6-doc
 brew install scip-5
 ```
 
