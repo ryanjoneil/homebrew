@@ -1,9 +1,9 @@
 class Gecode6 < Formula
   desc "Generic Constraint Development Environment"
   homepage "http://www.gecode.org/"
-  url "https://github.com/Gecode/gecode/archive/release-6.0.0.tar.gz"
-  sha256 "58621b01fd069a488a3020491ec36b4293a5da42e7750bd8fc758b0c3a92daad"
-  version "6.0.0"
+  url "https://github.com/Gecode/gecode/archive/release-6.0.1.tar.gz"
+  sha256 "8bef2fd195a99d28c83018255bd88e30f033007859cccee26f20e9e2683dcc82"
+  version "6.0.1"
 
   depends_on "boost"
   depends_on "mpfr"
