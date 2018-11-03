@@ -1,9 +1,9 @@
 class Gecode6Doc < Formula
   desc "Generic Constraint Development Environment: Documentation"
   homepage "http://www.gecode.org/"
-  url "http://www.gecode.org/download/gecode-doc-6.0.1.tar.gz"
-  sha256 "b99eaa2de6923bc526891a8c2bca781f8f26b29aefbe0cbffe3f85233e4b53d4"
-  version "6.0.1"
+  url "https://github.com/Gecode/gecode/releases/download/release-6.1.0/gecode-doc-6.1.0.tar.gz"
+  sha256 "087591076a941fa29787271819193fb5eb011e129abfe73857367a9347e52a18"
+  version "6.1.0"
 
   def install
     doc.install Dir["*"]
