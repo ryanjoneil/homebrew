@@ -1,4 +1,4 @@
-class Scip5 < Formula
+class Scip6 < Formula
   desc "SCIP Optimization Suite"
   homepage "http://scip.zib.de/"
   url "http://scip.zib.de/download/release/scipoptsuite-6.0.0.tgz"
