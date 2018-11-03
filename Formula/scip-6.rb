@@ -1,11 +1,11 @@
 class Scip5 < Formula
   desc "SCIP Optimization Suite"
   homepage "http://scip.zib.de/"
-  url "http://scip.zib.de/download/release/scipoptsuite-5.0.0.tgz"
-  sha256 "af47dd1c28997de857ba54761dc32cbfc54ab739c4050d37efa30cde740baf62"
-  version "5.0.0"
+  url "http://scip.zib.de/download/release/scipoptsuite-6.0.0.tgz"
+  sha256 "a91119687e521575070c43eaa30bc15ce461e9dc414651793ea4c4ca33b89750"
+  version "6.0.0"
 
-  depends_on "homebrew/science/ipopt"
+  depends_on "dartsim/dart/ipopt"
   depends_on "zlib"
 
   depends_on "gmp"
