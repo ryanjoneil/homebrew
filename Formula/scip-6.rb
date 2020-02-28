@@ -15,7 +15,7 @@ class Scip6 < Formula
 
   def install
     mkdir "build" do
-      system "cmake", "..", "-DCMAKE_INSTALL_PREFIX=#{prefix}", "-DIPOPT=on", "-DIPOPT_DIR=/usr/local/opt/ipopt"
+      system "/usr/local/bin/cmake", "..", "-DCMAKE_INSTALL_PREFIX=#{prefix}", "-DIPOPT=on", "-DIPOPT_DIR=/usr/local/opt/ipopt"
       system "make"
       system "make", "install"
 
