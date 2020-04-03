@@ -5,18 +5,23 @@ class Scip7 < Formula
   sha256 "9621fa3f94e3341830d4178d20c9219a2cfaec38bb4e68f72cf30843d648c344"
   version "7.0.0"
 
-  depends_on "dartsim/dart/ipopt"
+  depends_on "bison"
+  depends_on "flex"
+  depends_on "gmp"
+  depends_on "ipopt"
+  depends_on "pkg-config"
+  depends_on "readline"
   depends_on "zlib"
 
-  depends_on "gmp"
-  depends_on "readline"
-
   def install
-    system "make", "ZIMPL=true", "SHARED=false"
-    system "make", "install", "ZIMPL=true", "SHARED=false", "INSTALLDIR=#{prefix}"
+    mkdir "build" do
+      system "/usr/local/bin/cmake", "..", "-DCMAKE_INSTALL_PREFIX=#{prefix}", "-DIPOPT=on", "-DIPOPT_DIR=/usr/local/opt/ipopt"
+      system "make"
+      system "make", "install"
 
-    bin.install
-    lib.install
-    include.install
+      bin.install
+      lib.install
+      include.install
+    end
   end
 end
