@@ -1,22 +1,27 @@
 class Scip6 < Formula
   desc "SCIP Optimization Suite"
   homepage "http://scip.zib.de/"
-  url "http://scip.zib.de/download/release/scipoptsuite-6.0.0.tgz"
-  sha256 "a91119687e521575070c43eaa30bc15ce461e9dc414651793ea4c4ca33b89750"
-  version "6.0.0"
+  url "http://scip.zib.de/download/release/scipoptsuite-6.0.2.tgz"
+  sha256 "e25329a2ed4fbdde8a32279a4c955ee7a8b8795429b6e7105ae17998c2ecbe66"
+  version "6.0.2"
 
-  depends_on "dartsim/dart/ipopt"
+  depends_on "bison"
+  depends_on "flex"
+  depends_on "gmp"
+  depends_on "ipopt"
+  depends_on "pkg-config"
+  depends_on "readline"
   depends_on "zlib"
 
-  depends_on "gmp"
-  depends_on "readline"
-
   def install
-    system "make", "ZIMPL=true", "SHARED=false"
-    system "make", "install", "ZIMPL=true", "SHARED=false", "INSTALLDIR=#{prefix}"
+    mkdir "build" do
+      system "/usr/local/bin/cmake", "..", "-DCMAKE_INSTALL_PREFIX=#{prefix}", "-DIPOPT=on", "-DIPOPT_DIR=/usr/local/opt/ipopt"
+      system "make"
+      system "make", "install"
 
-    bin.install
-    lib.install
-    include.install
+      bin.install
+      lib.install
+      include.install
+    end
   end
 end
