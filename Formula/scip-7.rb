@@ -2,7 +2,7 @@ class Scip7 < Formula
   desc "SCIP Optimization Suite"
   homepage "http://scip.zib.de/"
   url "http://scip.zib.de/download/release/scipoptsuite-7.0.0.tgz"
-  sha256 "9621fa3f94e3341830d4178d20c9219a2cfaec38bb4e68f72cf30843d648c344"
+  sha256 "32fbb7e3cf93e431d858b64a6ffaa0b4a7dbeda114fcc9674b2b8ef85dee7209"
   version "7.0.0"
 
   depends_on "bison"
