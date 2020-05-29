@@ -2,7 +2,7 @@ class Gecode5 < Formula
   desc "Generic Constraint Development Environment"
   homepage "http://www.gecode.org/"
   url "https://github.com/Gecode/gecode/archive/release-5.1.0.tar.gz"
-  sha256 "f9885f97e0f80b54eaf1a8f9d0c419d831229a689619f6429c6148f5c50740d0"
+  sha256 "77863f4638c6b77d24a29bf6aeac370c56cd808fe9aabc1fca96655581f6c83d"
   version "5.1.0"
 
   depends_on "boost"
